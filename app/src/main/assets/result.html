@@ -427,9 +427,9 @@ async function start(){
 
   try{
     
-    let baseUrl = localStorage.getItem("DYNAMIC_API_URL") || "https://numberinfobysatyam.vercel.app/?apikey=satyam&number=";
+    let baseUrl = localStorage.getItem("DYNAMIC_API_URL") || "";
     try {
-        let confRes = await fetch("https://raw.githubusercontent.com/satyamgupta1287-coder/numberdetailfinder/main/app_config.json?t=" + Date.now());
+        let confRes = await fetch("https://raw.githubusercontent.com/satyamgupta1287-coder/numberdetailfinder-apk/refs/heads/main/app_config.json?t=" + Date.now());
         if (confRes.ok) {
             let conf = await confRes.json();
             if (conf.api_url) {
