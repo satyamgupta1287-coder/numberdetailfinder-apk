@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 1,
   "api_url": "https://numberinfobysatyam.vercel.app/?apikey=satyam&number=",
   "update_url": "https://docs.google.com/document/d/13qhmfI0AaRP0G9hsuGk8xHVBHHrGQKwBNA9HyQ1xAq4/edit?usp=drive_link"
 }
