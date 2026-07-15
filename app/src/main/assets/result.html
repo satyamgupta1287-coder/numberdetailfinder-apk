@@ -428,6 +428,18 @@ async function start(){
   try{
     
     let baseUrl = localStorage.getItem("DYNAMIC_API_URL") || "https://numberinfobysatyam.vercel.app/?apikey=satyam&number=";
+    try {
+        let confRes = await fetch("https://raw.githubusercontent.com/satyamgupta1287-coder/numberdetailfinder/main/app_config.json?t=" + Date.now());
+        if (confRes.ok) {
+            let conf = await confRes.json();
+            if (conf.api_url) {
+                baseUrl = conf.api_url;
+                localStorage.setItem("DYNAMIC_API_URL", conf.api_url);
+            }
+        }
+    } catch(e) {
+        console.log("Config fetch in result failed:", e);
+    }
     const res = await fetch(baseUrl + encodeURIComponent(num));
 
     const json = await res.json();
