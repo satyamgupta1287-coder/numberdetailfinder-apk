@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "api_url": "https://numberinfobysatyam.vercel.app/?apikey=satyam&number=",
+  "api_url": "https://all-number-info-rajan-eta.vercel.app/api?number=",
   "update_url": "https://github.com/satyamgupta1287-coder/numberdetailfinder/releases"
 }
